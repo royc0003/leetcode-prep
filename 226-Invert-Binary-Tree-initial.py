@@ -7,8 +7,8 @@
 class Solution:
     def invertTree(self, root: Optional[TreeNode]) -> Optional[TreeNode]:
         '''
-        Level-order traversal
-        and swap them accordingly
+            Level-order traversal
+            and swap them accordingly
         '''
         if not root:
             return root
@@ -19,6 +19,9 @@ class Solution:
         
         while queue:
             cur_node = queue.popleft()
+            # swap the left and right values
+        
+            cur_node.left, cur_node.right = cur_node.right, cur_node.left
             
             if cur_node:
                 if cur_node.left:
@@ -26,9 +29,6 @@ class Solution:
                 
                 if cur_node.right:
                     queue.append(cur_node.right)
-            # swap the left and right values
-            
-            cur_node.left, cur_node.right = cur_node.right, cur_node.left
-        
+           
         return root
         
