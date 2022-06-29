@@ -1,8 +1,9 @@
 class Solution:
     def ladderLength(self, beginWord: str, endWord: str, wordList: List[str]) -> int:
         '''
-        1. Create a pattern map
-        2. Run a bfs to find the shortest path
+        1. Create a pattern map -> e.g. hot -> *ot | h*t | ho*
+        2. Run a bfs to find the shortest path -> taking note that the neighbours of the cur_word
+        # are the those with similar patterns to cur_word
         '''
         
         # Handle edge case here
