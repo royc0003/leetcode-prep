@@ -12,6 +12,9 @@ class Solution:
         graph = defaultdict(list)
         
         def dfs(source, target):
+            '''
+            Test for reachability. If we can reach, it means that it's connected graph. Otherwise, it's a disconnected graph
+            '''
             # base case
             if source in seen:
                 return False
