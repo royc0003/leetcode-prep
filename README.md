@@ -17,7 +17,7 @@
 * Miscellaneous
 
 ### Logo Reference
-- :white_check_mark: -- done
+- :white_check_mark: -- ready
 - :question:         -- still unsure
 - :exclamation:      -- more emphasis
 - :x:                -- not ready
