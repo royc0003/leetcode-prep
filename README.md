@@ -16,6 +16,12 @@
 * Bitwise Operations
 * Miscellaneous
 
+### Logo Reference
+- :white_check_mark: -- done
+- :question:         -- still unsure
+- :exclamation:      -- more emphasis
+- :x:                -- not ready
+
 
 ### Arrays
 
