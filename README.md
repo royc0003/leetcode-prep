@@ -1,4 +1,5 @@
 # leetcode-prep
+In hope to provide more clarity and consistency in my revision. This is a migration attempt from my usual workflow of excel sheet.
 
 #### Credits to Rishi5154 for the structure
 
