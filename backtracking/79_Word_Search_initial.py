@@ -29,7 +29,8 @@ class Solution:
             for c in range(0, COL):
                 if board[r][c] == word[0]:
                     res = backtrack(r,c, word)
-                    return res if True else None
+                    if res:
+                        return True
                 
         return False
         
