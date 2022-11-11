@@ -1,12 +1,7 @@
 class Solution:
     def minWindow(self, s: str, t: str) -> str:
-        if len(t) > len(s):
+        if not t or not s:
             return ""
-        if len(t) == len(s):
-            if s == t:
-                return s
-            else:
-                return ""
         
         sCount, tCount = {}, {}
         l = 0 
@@ -15,7 +10,7 @@ class Solution:
             tCount[val] = tCount.get(val,0) + 1
             
         target = len(t)
-        res = [s] #start, end
+        res = [float('inf'), 0, 0] # window size, start, and end
         l = 0
         for r, v in enumerate(s):
             sCount[v] = sCount.get(v,0) + 1
@@ -24,15 +19,16 @@ class Solution:
                 matches += 1
             
             while l <= r and matches == target:
-                if (r - l  + 1) < len(s):
-                    res = s[l:r+1]
+                if (r - l  + 1) < res[0]:
+                    res = [r-l+1, l, r]
                 val = s[l]
-                if val in sCount and val in tCount and sCount[val] == tCount[val]:
-                    matches -= 1
                 sCount[val] -= 1
-                l += 1
+                if val in sCount and val in tCount and sCount[val] < tCount[val]:
+                    matches -= 1
                 
-        return res if matches > 0 else ""
+                l += 1
+        startIndex, endIndex = res[1], res[2]
+        return s[startIndex:endIndex +1] if res[0] != float('inf') else ""
                 
                     
             
