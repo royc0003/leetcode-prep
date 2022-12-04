@@ -29,7 +29,6 @@ class Solution:
             pre_res = prefix_arr[i][0] // prefix_arr[i][1]
             post_res = postfix_arr[i][0] // postfix_arr[i][1] if postfix_arr[i][1] != 0 else 0
             avgRes = abs(pre_res - post_res)
-            print(avgRes)
             curMinRes = minRes[0]
             if avgRes < curMinRes:
                 minRes = [avgRes, i]
