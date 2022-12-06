@@ -8,21 +8,20 @@ for item in df['data']:
         arr.append(' ')
     else:
         arr.append(int(item))
-def part_1():
-    maxSum = float('-inf')
-    l = 0 
-    curSum = 0 
-    for r, val in enumerate(arr):
-        curSum += val if val != ' ' else 0 
-        if (r + 1) < len(arr) and arr[r+1] == ' ':
-            maxSum = max(curSum, maxSum)
-            curSum = 0 
-            l = r + 2 if (r + 2) < len(arr) else None
 
-    print(maxSum)
+maxSum = float('-inf')
 
-def part_2():
-    pass
+l = 0 
+curSum = 0 
+for r, val in enumerate(arr):
+    curSum += val if val != ' ' else 0 
+    if (r + 1) < len(arr) and arr[r+1] == ' ':
+        maxSum = max(curSum, maxSum)
+        curSum = 0 
+        l = r + 2 if (r + 2) < len(arr) else None
+
+print(maxSum)
+
 
 
 
