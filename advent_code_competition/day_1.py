@@ -24,6 +24,11 @@ for r, val in enumerate(arr):
 print(maxSum)
 
 def part_2_heapify():
+    '''
+    sort() -- timSort() -- O(nLgN)
+    heapify -- O(N)
+    heappush -- and build entire tree -- O(nLgN)
+    '''
     df = pd.read_csv('day_1.csv', skip_blank_lines=False)
     arr = []
     for item in df['data']:
