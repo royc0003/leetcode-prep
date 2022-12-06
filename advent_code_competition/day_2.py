@@ -53,7 +53,10 @@ point_map_2 = {'A': 1, 'B': 2, 'C': 3}
 win_map_2 = {'A':'B', 'B':'C', 'C':'A'} # if opoopent choose rock : you choose paper (mapping)
 lose_map_2 = {'A' : 'C', 'B': 'A', 'C': 'B'} # if opponent choose rock: you choose scissors (mapping)
 def solution_part_2(opponent_arr, user_arr, point_map_2, win_map_2, lose_map_2):
-    
+    '''
+    O(N) time complexity
+    O(N) space complexity 
+    '''
     i = 0 
     res = 0 
     while i < len(user_arr):
