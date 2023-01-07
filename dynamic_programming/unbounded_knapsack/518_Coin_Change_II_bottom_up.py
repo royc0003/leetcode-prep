@@ -18,4 +18,4 @@ class Solution:
                 if total >= coins[i]:
                     dp[i][total] += dp[i][total-coins[i]]
 
-        return dp[ROW-1][COL-1] if dp[ROW-1][COL-1] != float('inf') else 0 
+        return dp[ROW-1][COL-1]
