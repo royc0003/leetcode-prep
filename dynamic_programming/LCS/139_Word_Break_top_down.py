@@ -1,6 +1,6 @@
 class Solution:
     def wordBreak(self, s: str, wordDict: List[str]) -> bool:
-        i, j = 0, 0 # i = s pointer
+        i = 0 # i pointer 
         cache = {}
         def check_word(i):
             if i >= len(s):
