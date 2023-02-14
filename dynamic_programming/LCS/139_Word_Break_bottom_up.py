@@ -2,6 +2,8 @@ class Solution:
     def wordBreak(self, s: str, wordDict: List[str]) -> bool:
         '''
         dp[i] = DP[i + len(matched_string)]
+        O(N^3), first `N` for iterating through String S, second `N` for iterating through wordDict
+        , and third `N` for substring and string matching complexity
         '''
         dp = [False] * (len(s) + 1)
         dp[len(s)] = True
