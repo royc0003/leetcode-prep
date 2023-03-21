@@ -29,4 +29,3 @@ class Solution:
                 # if min_heap is empty, 
                 res[cur_index] = -1
         return res
-        
