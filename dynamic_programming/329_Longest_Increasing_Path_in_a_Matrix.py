@@ -1,5 +1,8 @@
 class Solution:
     def longestIncreasingPath(self, matrix: List[List[int]]) -> int:
+        '''
+        O(M*N)
+        '''
         ROW, COL = len(matrix), len(matrix[0])
 
         # top-down approach, to handle repeated cases
